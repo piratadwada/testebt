@@ -1,0 +1,52 @@
+{
+  "name": "4UP Gerador de estatistica",
+  "options_page": "view/options.html",
+  "manifest_version":2,
+  "permissions": [
+    "notifications",
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "<all_urls>"
+  ],
+  "icons": {"16": "assest/icon.png", "48": "assest/icon.png", "128": "assest/icon.png"},
+  "version": "2",
+  "description": "Verificar posição das palavras-chaves",
+  "devtools_page": "view/devtools.html",
+  "browser_action":{
+    "default_popup": "view/popup.html"
+  },
+  "background": {
+  "scripts": ["assest/js/background.js"]
+},
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com.br/*"],
+      "js": ["main.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "assest/icon.png"
+  ],
+  "chrome_url_overrides" : {
+    "newtab": "view/newtab.html"
+  },
+
+  "oauth2": {
+   "client_id": "975410329966.apps.googleusercontent.com",
+ "scopes": [
+   "<all urls>",
+   "https://www.googleapis.com/auth/drive",
+   "https://mail.google.com/",
+   "https://www.googleapis.com/auth/gmail.login",
+   "https://www.googleapis.com/auth/gmail.compose",
+   "https://www.googleapis.com/auth/gmail.readonly",
+   "https://www.googleapis.com/auth/gmail.send"
+  ],
+  "content_security_policy": [
+    "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js; object-src 'self'",
+    "script-src 'self' https://apis.google.com; object-src 'self'"
+  ]
+}
+}

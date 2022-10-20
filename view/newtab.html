@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Options</title>
+	<link rel="stylesheet" href="../assest/css/tabela.css" media="screen" title="no title">
+	<style media="screen">
+		.display-btn {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+		}
+		.qks8td {
+			visibility: visible !important;
+		}
+		a {
+			text-decoration: none;
+			color: #222;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			padding: 5px;
+			text-align: left;
+		}
+
+		table#t01 tr:nth-child(even) {
+			background-color: #eee;
+		}
+
+		table#t01 tr:nth-child(odd) {
+			background-color: #fff;
+		}
+
+		table#t01 th {
+			background-color: black;
+			color: white;
+		}
+
+		.content {
+			width: 70%;
+			margin: 0 auto;
+		}
+		h3 span {
+			font-size: 26px;
+			color: green;
+		}
+
+		.black {
+			background-color: black;
+			color: #fff;
+		}
+
+		.content {
+			width: 70%;
+			margin: 0 auto;
+			border: solid 1px #888;
+			padding: 92px 108px;
+		}
+
+		.logo_4up {
+			max-width: 200px;
+			max-height: 70px;
+			/* background: #000; */
+			position: absolute;
+			top: 1.1rem;
+			left: 17rem;
+			padding: 5px;
+			border-radius: 10px;
+		}
+
+		.text_contact {
+			display: block;
+		}
+
+		.div_info {
+			position: absolute;
+			/* top: 27px;
+			right: 120px; */
+			font-size: 14px;
+			top: 2rem;
+			right: 15rem;
+		}
+
+		i {
+			font-size: 18px;
+			margin: 0 6px;
+			padding: 0;
+			vertical-align: -4px;
+		}
+
+		#info {
+			border: solid 1px #888;
+			padding: 30px;
+			border-radius: 8px;
+		}
+	</style>
+
+	<style type="text/css" media="print">
+		a {
+			text-decoration: none;
+			color: #222;
+		}
+
+		table {
+			width: 100%;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			padding: 5px;
+			text-align: left;
+		}
+
+		table#t01 tr:nth-child(even) {
+			background-color: #eee;
+		}
+
+		table#t01 tr:nth-child(odd) {
+			background-color: #fff;
+		}
+
+		table#t01 th {
+			background-color: black;
+			color: white;
+		}
+
+		.content {
+			width: 70%;
+			margin: 0 auto;
+		}
+
+		.display-btn a {
+			display: none !important;
+		}
+
+		h3 span {
+			font-size: 26px;
+			color: green;
+		}
+
+		.black {
+			background-color: black;
+			color: #fff;
+		}
+
+		.content {
+			width: 70%;
+			margin: 0 auto;
+			border: solid 1px #888;
+			padding: 92px 108px;
+		}
+
+		.logo_4up {
+			max-width: 200px;
+			max-height: 70px;
+			/* background: #000; */
+			position: absolute;
+			top: 1rem;
+			left: 8rem;
+			padding: 5px;
+			border-radius: 10px;
+		}
+
+		.text_contact {
+			display: block;
+		}
+
+		.div_info {
+			position: absolute;
+			/* top: 27px;
+			right: 120px; */
+			font-size: 14px;
+			top: 2rem;
+			right: 8rem;
+		}
+
+		i {
+			font-size: 18px;
+			margin: 0 6px;
+			padding: 0;
+			vertical-align: -4px;
+		}
+
+		#info {
+			border: solid 1px #888;
+			padding: 30px;
+			border-radius: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="display-btn">
+		<a class="btn-recomecar" href="https://seo-miguel.glitch.me/resert">Recomeçar Estatistica</a>
+		<a class="btn-limpar" href="https://seo-miguel.glitch.me/remove_all">Limpar informações</a>
+		<a class="btn-ver" href="https://seo-miguel.glitch.me/palavras">Ver palavras registradas</a>
+		<a class="btn-ver btn-imprimir" href="#">Imprimir/Salvar PDF</a>
+		<a class="btn-ver btn-show-priority" href="#">Ver Prioridades</a>
+	</div>
+
+	<div class="content">
+		<img class="logo_4up" src="../assest/4up-black.png" alt="">
+		<div class="div_info">
+			<span class="text_contact"> <i>&#9742;</i> Telefone: (11) 4372-9277</span>
+			<span class="text_contact"> <i>&#9993;</i> E-mail: contato@agencia4up.com.br</span>
+		</div>
+		<hr>
+		<div style="display:flex;justify-content: space-around;">
+			<div>
+				<h1 id="site-url">SITE</h1>
+				<h3 id="date">Data</h3>
+				<h3 id="info"></h3>
+			</div>
+			<div style="margin:20px">
+				<canvas id="myChart" width="300" height="300"></canvas>
+			</div>
+		</div>
+
+		<table class="sortable" id="t01" style="background-color:#fff;width:100%;">
+			<tr>
+				<th>Nº</th>
+				<th>PALAVRA</th>
+				<th>PÁGINA</th>
+				<th>POSIÇÃO</th>
+			</tr>
+
+		</table>
+	</div>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"> </script>
+	<script src="../assest/js/Chart.js" charset="utf-8"></script>
+	<script src="../assest/js/newtab.js" charset="utf-8"></script>
+	<!-- <script src="../assest/js/sorttable.js"></script> -->
+</body>
+
+</html>

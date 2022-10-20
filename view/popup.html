@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Estatisticas 4up</title>
+	<style media="screen">
+		#btn-optins-page {
+			/* width: 100px; */
+			margin-right: 10px;
+		}
+		body {
+			min-width: 400px;
+			background-color: #2b63cb;
+			color: #FFF;
+		}
+
+		textarea {
+			width: 95%;
+			margin: 5px 0;
+			border-radius: 5px;
+			padding: 5px;
+		}
+
+		input {
+			width: 95%;
+			margin: 5px 0;
+			border-radius: 5px;
+			padding: 5px;
+		}
+		button {
+			border-radius: 5px;
+			padding: 10px;
+		}
+		.formulario {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.div-botoes {
+			margin-top: 1rem;
+		}
+	</style>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<form class="formulario" method="post">
+		<h2>Estatisticas</h2>
+		<input id="url" type="text" name="url" value="" placeholder="exemplo.com.br">
+		<textarea id="palavras" rows="3" placeholder="Palavra chaves
+Palavra chaves
+Palavra chaves"></textarea>
+		<div class="div-botoes">
+			<button id="btn-optins-page" type="button" name="button"><i class="fa fa-cog fa-2"></i> Informações</button>
+			<button id="sub" type="button" name="button"><i class="fa fa-check fa-2"></i> Confirmar</button>
+		</div>
+	</form>
+
+	<script src="../assest/js/popup.js"></script>
+
+
+</body>
+
+</html>
